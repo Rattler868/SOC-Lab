@@ -1,2 +1,2 @@
 # SOC-Lab
-I will be a SOC Lab at home
+This will be my first attempt at building a SOC lab at home.
