@@ -1,0 +1,9 @@
+# This file will be used as a daily journal to keep track of everything I am done.
+
+
+** 20 June 26 **
+
+- created a duel-remote Git setup
+  - My NAS will give me local, private, and offline redundancy
+  - Every commit I will make can now be backed up in two places:  Github and the NAS
+  - Command in VS code terminal to push to Github and the NAS      git pushall
