@@ -7,3 +7,63 @@
   - My NAS will give me local, private, and offline redundancy
   - Every commit I will make can now be backed up in two places:  Github and the NAS
   - Command in VS code terminal to push to Github and the NAS      git pushall
+
+- wrote the first documents
+  - network layout
+  - virtual machines roles
+  - architecture
+
+- created VMs
+  - kali
+  - ubuntu server
+
+- created internal switch for VM
+- created a external switch so VM can reach the internet to finish instillation 
+
+
+- stopping point
+  - ubuntu server was broken
+    - installed twice and still was broken
+- start up next time installing ubuntu server
+
+SOC Lab Full Recap 
+
+1. Disk Space Crisis Resolved
+- The C: drive was critically low on space (0.02 GB free).
+- Identified large VHDX files consuming storage.
+- Deleted ServerDM1, ServerDM2, and ServerHyperV VMs and their associated virtual disks.
+- Recovered approximately 29 GB of free space.
+- Host system stability restored.
+
+1. Hyper-V Environment Cleaned Up
+- Removed unnecessary VMs safely without impacting core lab components.
+- Confirmed essential servers (e.g., ServerDC1, ServerSA1) remain intact.
+- Hyper-V performance improved after cleanup.
+
+1. Ubuntu Gen2 VM Issues
+- Ubuntu VM experienced repeated freezing.
+- Eventually dropped into the GNU GRUB terminal, indicating a corrupted or incomplete installation.
+- Determined that repairing the VM would be more time-consuming than recreating it.
+- Recommended solution: delete and recreate the Ubuntu VM with correct Hyper-V settings.
+
+1. Recommended Next Steps (For Next Session)
+2. Delete the corrupted Ubuntu VM.
+3. Recreate Ubuntu Gen2 with the following Hyper-V settings:
+   - Generation 2 VM
+   - Static RAM (4 GB)
+   - Dynamic Memory disabled
+   - Secure Boot disabled
+   - 2 virtual CPUs
+4. Install Ubuntu Server without GUI first.
+5. After confirming a clean boot, install Xfce + XRDP for Enhanced Session Mode.
+6. Continue SOC lab build (e.g., Wazuh installation, agent configuration).
+
+7. Current Lab Status Summary
+- Windows host: stable and healthy.
+- Hyper-V: functioning normally.
+- Storage: 29 GB free.
+- Core servers: operational.
+- Only Ubuntu VM requires recreation.
+
+1. Closing Note
+The user made significant progress today by stabilizing the host system, cleaning up Hyper-V, and preparing the environment for a clean Ubuntu reinstall. The lab is in a strong position to continue during the next session.
